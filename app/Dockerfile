@@ -12,7 +12,7 @@ RUN python3 -m pip install -r /app/src/requirements.txt
 
 WORKDIR /app/src
 
-COPY /app/create_backend.sh /app/src/create_backend.sh
+COPY create_backend.sh /app/src/create_backend.sh
 
 EXPOSE 8000
 
