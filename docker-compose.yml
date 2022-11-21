@@ -9,13 +9,12 @@ services:
       - 3306
     env_file: variables.env
   app:
-    image: diasdra/demo4640:latest
+    image: diasdra/demo4640app:latest
     depends_on:
       - db
     env_file: variables.env
   web:
-    build:
-      dockerfile: ./web/Dockerfile
+    image: diasdra/demo4640web:latest
     depends_on:
       - db
     ports:
